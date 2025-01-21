@@ -99,22 +99,20 @@ header {
     text-align: center;
 }
 
-#carrossel {
+#container {
     display: flex;
     max-width: 1200px;
-    justify-content: center;
     margin: auto;
-    gap: 24px;
+    gap: 8px;
 }
 
 .case {
     border-radius: 10px;
     background-color: rgb(255, 255, 255);
     box-shadow: 0px 4px 12px 1px rgba(59, 59, 59, 0.232);
-    width: 384px;
-    margin: auto;
     padding: 20px;
     transition: transform .24s ;
+    /*width: 384px;*/
 }
 
 .case:hover {
@@ -136,7 +134,7 @@ header {
 }
 
 .case p{
-    margin-top: 8px;
+    margin: 8px 0;
 }
 
 .case a{
@@ -144,7 +142,6 @@ header {
     background: var(--black);
     color: white;
     display: inline-block;
-    margin-top: 8px;
     border-radius: 4px;
     width: 100%;
     text-align: center;
@@ -177,26 +174,49 @@ header {
     padding: 24px;
 }
 
+
 table {
     border-collapse: collapse;
 }
 
 th, td {
-    padding: 8px 14px;
+    padding: 16px 14px;
     text-align: left;
     vertical-align: top;
+}
+
+th {
+    background-color: var(--black);
+    font-weight: bolder;
+    font-size: 1.2em;
+    font-style: italic;
+}
+
+tr {
+    margin-bottom: 4px;
 }
 
 tr:nth-child(odd) {
     background-color: var(--black-secundary);
 }
 
-td > ul > li {
+li {
     list-style-position: inside;
-    line-height: 1.3em;
+    line-height: 1.5em;
+    vertical-align: top;
+    position: relative;
+    top: -5px;
 }
 
 li span {
     position: relative;
     left: -10px;
+}
+
+td.period {
+    font-size: 0.9em;
+}
+
+td em {
+    font-size: 16px;
 }
