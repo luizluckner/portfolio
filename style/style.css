@@ -152,6 +152,10 @@ header {
     background-color: #000000;
 }
 
+.abandono > p {
+    width: 100%;
+}
+
 #profissional {
     color: var(--white);
     max-width: 1200px;
