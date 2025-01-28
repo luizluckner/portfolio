@@ -76,7 +76,6 @@ header {
     display: flex;
     margin: auto;
     max-width: 1200px;
-    /* transform: rotate(30deg); */
 }
 
 #action {
