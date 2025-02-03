@@ -18,6 +18,8 @@ body {
     margin: 0 auto;
 }
 
+/* SEÇÃO DO MENU */
+
 header {
     background-color: var(--white);
     box-shadow: 2px 0 4px 4px rgba(70, 70, 70, 0.201);
@@ -28,13 +30,17 @@ header {
     z-index: 1;
 }
 
+.space {
+    width: 296px;
+}
+
 .header {
     max-width: 1200px;
     margin: auto;
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 #menu {
@@ -43,6 +49,17 @@ header {
     height: 100%;
     justify-content: center;
     align-items: center;
+}
+
+#menu ul {
+    height: 100%;
+    list-style: none;
+    display: flex;
+}
+
+#menu li {
+    position: relative;
+    top: 0px
 }
 
 #menu a {
@@ -64,29 +81,37 @@ header {
 
 /* CONFIGURAÇÕES DA PRIMEIRA PARTE */
 
-#primeiro {
+#hero {
     width: 100%;
+    height: 100vh;
     background: white url(../image/bg-first.jpg) no-repeat center center;
     background-size: cover;
     text-align: center;
     clip-path: polygon(0 0, 100% 0, 100% 93%, 0 100%);
     box-shadow: 2px 2px 4px black;
-}
-
-#first {
-    height: 100vh;
     display: flex;
-    margin: auto;
-    width: 100%;
-    background-color: #00000091;
+    justify-content: center;
+    align-items: center;
 }
 
-#action {
+#hero::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #000000af;
+}
+
+#hero-content {
+    max-width: 1200px;
     margin: auto;
     color: var(--white);
+    z-index: 2;
 }
 
-#action h1 {
+#hero-content h1 {
     margin-bottom: 24px;
     font-size: 4em;
     text-shadow: 2px 2px 2px rgba(58, 58, 58, 0.673);
@@ -102,15 +127,25 @@ header {
     margin-top: 40px;
     border-radius: 44px;
     text-decoration: none;
-    font-weight: bolder;
+    font-weight: 300;
+
+}
+.btn-download::after {
+    content: "download"; /* Nome do ícone */
+    font-family: 'Material Symbols Outlined';
+    font-size: 24px; /* Ajuste conforme necessário */
+    vertical-align: sub;
+    margin-left: 16px;
 }
 
 .btn-download:hover {
-    background-color: var(--black-secundary);
+    /* background-color: var(--black-secundary); */
     box-shadow: 0px 4px 8px 1px rgba(255, 255, 255, 0.308);
-    color: var(--white);
-    transform: translate(0px, -4px),;
-    transition: background-color .3s;
+    /* color: var(--white); */
+    transform: scale(1.02);
+    transition: transform .3s;
+    font-weight: bolder;
+    font-weight: bolder;
 }
 
 .btn-projects {
@@ -120,16 +155,15 @@ header {
     border: 4px solid white;
     color: white;
     text-decoration: none;
-    font-weight: bolder;
     padding: 24px;
     border-radius: 44px;
 }
 
 .btn-projects:hover {
-    background-color: white;
-    color: var(--black);
-    transition: background-color .3s;
-    transform: translate(-2px -2px);
+    background-color: rgba(255, 255, 255, 0.304);
+    transform: scale(1.02);
+    transition: transform .3s;
+    font-weight: bolder;
 
 }
 
@@ -303,7 +337,7 @@ td em {
 
 /* SEÇÃO DAS FORMAÇÕES ACADEMICAS */
 
-#educational {
+#quarto {
     background-color: var(--black-secundary);
     height: 100vh;
     color: var(--white);
@@ -311,7 +345,41 @@ td em {
     padding: 48px 0;
 }
 
-#educational h1 {
+#expertize h1 {
     font-size: 2.5em;
+    margin-bottom: 40px;
+}
 
+#expertize {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.badge {
+    padding: 16px 32px;
+    background-color: var(--black);
+    display: inline-block;
+    border-radius: 48px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.social-links a {
+    margin: 0 10px;
+    color: #fff;
+    font-size: 24px;
+}
+
+.social-links a:hover {
+    color: #00aaff; /* Altere para a cor de sua preferência */
 }

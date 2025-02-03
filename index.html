@@ -3,36 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luiz's Portfolio</title>
+    <title>Luiz Eduardo | Product Designer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="style/mobile.css">
+    <meta name="description" content="Portfólio de Luiz Eduardo, Product Designer com experiência em UX/UI e otimização de processos digitais. Veja meus projetos e trajetória profissional.">
+
 </head>
 <body>
     <header>
         <div class="header">
+            <div class="space"></div> <!--Espaço para centralizar o nome no header-->
             <h1>Luiz Eduardo</h1>
             <nav id="menu">
-                <a href="#projects">Projetos</a>
-                <a href="#profissional">Profissional</a>
-                <a href="#educational">Formação</a>
+                <ul>
+                    <li><a href="#projects">Projetos</a></li>
+                    <li><a href="#profissional">Profissional</a></li>
+                    <li><a href="#expertize">Formação</a></li>
+                </ul>
             </nav>
         </div>
     </header>
     <main>
-        <div id="primeiro">
-            <section id="first">
-                <article id="action">
+        <!--HERO-->
+        <section id="hero" aria-label="Sorbe mim">
+                <article id="hero-content">
                     <h1>Desde 2019 impactando <br> <em>pessoas, produtos e negócios</em></h1>
-                    <!-- <p>Confira toda minha trajetória profissional.</p> -->
                     <a href="docs/CV - Luiz Eduardo Luckner Costa.pdf" download class="btn-download">Download CV</a>
                     <a href="#projects" class="btn-projects">Ver projetos CV</a>
-                <!-- </article>
-                <aside id="image">
-                    <img src="image/me.jpg" alt="minha foto"> Colocar a extensão do arquivo
-                </aside> -->
-            </section>
-        </div>
-        <section id="projects">
+                </article>
+        </section>
+        <!--PROJETOS-->
+        <section id="projects" aria-label="Projetos em destaque">
             <h1>Projetos</h1>
             <p>Confira alguns projetos que mostram um pouco sobre minha metodologia de trabalho.</p>
             <div id="container">
@@ -41,7 +42,7 @@
                         <img src="image/capa-abandono.png" alt="Capa do case abandono de carrinho">
                         <h2>Abandono de carrinho</h2>
                         <p>Projeto realizado para o site de compra de atividades para o Hurb, uma das maiores agencias de viagem online do Brasil. Este projeto apresento um pouco sobre meu processo de trabalho e como solucionamos o problema de abandono de carrinho e uma melhoria de conversão de quase 65%.</p>
-                        <a href="pages/abandono.html" target="_blank">Confiera o case completo</a>
+                        <a href="pages/abandono.html" target="_blank" rel="noopener noreferrer">Confiera o case completo</a>
                     </article>
                 </div>
                 <div class="case">
@@ -49,7 +50,7 @@
                         <img src="image/capa-abandono.png" alt="Capa do case abandono de carrinho">
                         <h2>Abandono de carrinho</h2>
                         <p>Este case mostra como adaptamos métodos de teste de usabilidade ao ambiente remoto durante a pandemia, para melhorar um sistema interno da AmBev voltado à simulação e compra de insumos. O processo incluiu uma Design Sprint, e um Focus Group remoto, onde clientes testaram o e deram feedback em tempo real.</p>
-                        <a href="pages/abandono.html" target="_blank">Confiera o case completo</a>
+                        <a href="pages/abandono.html" target="_blank" rel="noopener noreferrer">Confiera o case completo</a>
                     </article>
                 </div>
                 <div class="case">
@@ -57,21 +58,24 @@
                         <img src="image/capa-abandono.png" alt="Capa do case abandono de carrinho">
                         <h2>Plataforma de eventos online</h2>
                         <p>Este case mostra como adaptamos métodos de teste de usabilidade ao ambiente remoto durante a pandemia, para melhorar um sistema interno da AmBev voltado à simulação e compra de insumos. O processo incluiu uma Design Sprint, e um Focus Group remoto, onde clientes testaram o e deram feedback em tempo real.</p>
-                        <a href="pages/abandono.html" target="_blank">Confiera o case completo</a>
+                        <a href="pages/abandono.html" target="_blank" rel="noopener noreferrer">Confiera o case completo</a>
                     </article>
                 </div>
             </div>
         </section>
-        <div id="terceiro">
-            <section id="profissional">
+        <!--RESUMO PROFISSIONAL-->
+        <section id="terceiro" aria-label="Trajetória profissional">
+            <article id="profissional">
                 <h1>Trajetória profissional</h1>
                 <p>Confira alguns projetos que mostram um pouco sobre minha metodologia de trabalho.</p>
                 <table>
                     <thead>
-                        <th>Empresa</th>
-                        <th>Período</th>
-                        <th>Cargo</th>
-                        <th>Função</th>
+                        <tr>
+                            <th scope="col">Empresa</th>
+                            <th scope="col">Período</th>
+                            <th scope="col">Cargo</th>
+                            <th scope="col">Função</th>
+                        </tr>
                     </thead>
                     <tbody>
                         <tr>
@@ -146,18 +150,34 @@
                         </tr>
                     </tbody>
                 </table>
-            </section>
-        </div>
-        <section id="educational">
-            <div id="quarto">
-                <article>
-                    <h1>Formação academica</h1>
-                </article>
-            </div>
+            </article>
+        </section>
+        <!--ESPECIALIDADES-->
+        <section id="quarto" aria-label="Minhas especialidades">
+            <article id="expertize">
+                <h1>Especialidades</h1>
+                <div class="badge">Research</div>
+                <div class="badge">Testes de usabilidade</div>
+                <div class="badge">Prototipação</div>
+                <div class="badge">Analise de dados</div>
+                <div class="badge">Product strategy</div>
+            </article>
         </section>
         <footer>
-
+            <div class="footer-content">
+                <p>&copy; 2025 Luiz Eduardo. Todos os direitos reservados.</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/seu-usuario" target="_blank" rel="noopener noreferrer">
+                        <img src="linkedin-icon.svg" alt="LinkedIn">
+                    </a>
+                    <a href="https://github.com/seu-usuario" target="_blank" rel="noopener noreferrer">
+                        <img src="github-icon.svg" alt="GitHub">
+                    </a>
+                </div>
+                <p>Contato: <a href="mailto:seuemail@example.com">seuemail@example.com</a></p>
+            </div>
         </footer>
+        
     </main>
 </body>
 </html>
