@@ -19,6 +19,10 @@ body {
     margin: 0 auto;
 }
 
+section {
+    scroll-margin-top: 60px; /* Ajuste para a altura do seu header */
+  }
+
 /* CONFIGURAÇÕES DO MENU */
 
 header {
@@ -269,6 +273,7 @@ header {
     width: 100%;
     background: var(--white);
     text-align: center;
+    /* padding-top: 65px; */
 }
 
 #profissional {
