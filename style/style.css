@@ -440,10 +440,11 @@ td em {
 /* CONFIGURAÇÕES DO FOOTER */
 
 footer {
-    background-color: var(--black-secundary);
-    color: var(--white);
+    background-color: var(--white);
+    color: var(--black);
     padding: 20px;
     text-align: center;
+    box-shadow: 4px 0 40px 3px rgba(255, 255, 255, 0.21);
 }
 
 .footer-content {
