@@ -31,25 +31,30 @@ header {
     z-index: 1;
 }
 
-.space {
-    width: 296px;
-}
-
 .header {
     max-width: 1200px;
     margin: auto;
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
-.header a {
+.space {
+    height: 20px;
+    flex: 1 0 auto;
+    background-color: #00aaff;
+}
+
+.header > a {
     text-decoration: none;
     color: var(--black);
+    flex: 1 0 auto;
+    /* text-align: center */
 }
 
 #menu {
+    flex; 1 0 auto;
     display: flex;
     gap: 8px;
     height: 100%;
@@ -68,7 +73,7 @@ header {
     top: 0px
 }
 
-#menu a {
+#menu > ul > li > a {
     height: 100%;
     display: flex;
     align-items: center;
