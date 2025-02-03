@@ -44,6 +44,11 @@ header {
     justify-content: space-evenly;
 }
 
+.header a {
+    text-decoration: none;
+    color: var(--black);
+}
+
 #menu {
     display: flex;
     gap: 8px;
