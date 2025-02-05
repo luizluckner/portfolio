@@ -140,7 +140,7 @@ header {
     content: '→ ';
 }
 
-#case p, li {
+#case p, #case li {
     margin-bottom: 16px;
     font-size: 1.1em;
 }
