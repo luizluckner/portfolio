@@ -497,6 +497,8 @@ footer {
     transition: transform .3s;
   }
 
+/* CONFIGURAÇÃO PARA MOBILE */
+
   @media screen and (max-width: 601px) {
     .header {
         padding: 0 16px;
@@ -504,13 +506,20 @@ footer {
 
     #hero {
         width: 100%;
+        padding: 45px;
     }
 
     #hero-content {
-        padding: 16px;
+        padding: 0 45px;
+    }
+
+    .btn-download {
+        margin-top: 20px;
+        width: 300px;
     }
 
     .btn-projects {
+        width: 300px;
         margin: 0;
         margin-top: 20px;
     }
@@ -534,19 +543,14 @@ footer {
     }
 
     #profissional {
-        padding: 16px;
+        padding: 32px 16px;
     }
 
     #quinto {
         width: 100%;
         color: var(--white);
-        padding: 48px 0;
+        padding: 32px 0;
         margin:0;
-    }
-
-    #about {
-        margin-top: 0px;
-        padding: 0;
     }
 
     .about-content {
@@ -565,6 +569,14 @@ footer {
     .badge-skill {
         justify-content: center;
         align-items: center;
+    }
+
+    .footer-content {
+        flex-flow: column-reverse;
+    }
+
+    .social-links {
+        margin-bottom: 16px;
     }
 
   }
