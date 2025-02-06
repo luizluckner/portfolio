@@ -314,3 +314,35 @@ footer {
     transform: scale(1.08);
     transition: transform .3s;
   }
+
+  @media screen and (max-width: 601px) {
+
+    .header {
+        padding: 0 16px;
+    }
+    
+    #hero-img {
+        height: 300px;
+        background-size: cover;
+    }
+
+    #case {
+        padding: 48px 24px;
+    }
+
+    .mais-case {
+        padding: 16px;
+    }
+
+    #container {
+        flex-flow: column;
+    }
+
+    .footer-content {
+        flex-flow: column-reverse;
+    }
+
+    .social-links {
+        margin-bottom: 16px;
+    }
+}
