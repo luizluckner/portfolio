@@ -173,7 +173,7 @@
                 <div class="about-content">
                     <article id="about">
                         <h1>Sobre mim</h1>
-                        <p>Possuo sólida experiência em design de produto, atuando em empresas de tecnologia de diversos setores, com foco na criação de soluções inovadoras e centradas no usuário. Desenvolvo fluxos, protótipos e interfaces com ênfase em usabilidade, eficiência e acessibilidade. <br>Tenho forte habilidade em liderar projetos, conduzindo pesquisas, análises de dados e validações de hipóteses para otimização contínua de sistemas complexos. Possuo experiência em ferramentas analíticas e metodologias ágeis, garantindo a entrega de produtos que atendem às demandas dos clientes e do mercado. Busco constantemente atualizações e especializações, trazendo contribuições significativas para o sucesso das equipes e empresas em que atuo.</p>
+                        <p style="line-height: 23px;">Sou o Luiz Eduardo, tenho <span id="myAge">XX</span> anos, casado e pai da Catarina.<br><br> Possuo sólida experiência em design de produto, atuando em empresas de tecnologia de diversos setores, com foco na criação de soluções inovadoras e centradas no usuário. Desenvolvo fluxos, protótipos e interfaces com ênfase em usabilidade, eficiência e acessibilidade. <br><br>Tenho forte habilidade em liderar projetos, conduzindo pesquisas, análises de dados e validações de hipóteses para otimização contínua de sistemas complexos. Possuo experiência em ferramentas analíticas e metodologias ágeis, garantindo a entrega de produtos que atendem às demandas dos clientes e do mercado. Busco constantemente atualizações e especializações, trazendo contribuições significativas para o sucesso das equipes e empresas em que atuo.</p>
                     </article>
                     <article id="skill">
                         <h1>Especialidades</h1>
@@ -213,5 +213,23 @@
             </div>
         </footer>
     </main>
+    <script>
+        window.onload = function showAge() {
+            const nascimento = new Date(1991,6,2)
+            const hoje = new Date()
+            let idade = hoje.getFullYear() - nascimento.getFullYear()
+
+            const mesAtual = hoje.getMonth()
+            const diaAtual = hoje.getDate()
+            const mesBorn = nascimento.getMonth()
+            const diaBorn = nascimento.getDate()
+
+            if (mesAtual < mesBorn || (mesAtual === mesBorn && diaAtual < diaBorn)) {
+               idade --
+            } 
+
+            document.querySelector('#myAge').innerHTML = idade
+        }
+    </script>
 </body>
 </html>
