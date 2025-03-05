@@ -187,7 +187,8 @@ header {
 
 #projects {
     height: 100%;
-    width: 100%;
+    max-width: 1200px;
+    margin: auto;
     padding: 48px 0;
 }
 
@@ -204,7 +205,7 @@ header {
 }
 
 #container {
-    max-width: 1200px;
+    width: 100%;
     margin: auto;
     display: flex;
     flex-flow: row nowrap;
@@ -213,9 +214,9 @@ header {
 }
 
 .case {
+    width: 400px;
     border-radius: 10px;
     background: var(--black-secundary);
-    /* box-shadow: 0px 4px 12px 1px rgba(59, 59, 59, 0.232); */
     padding: 20px;
     transition: transform .24s ;
     flex: 0 1 auto;
@@ -244,9 +245,6 @@ header {
 
 .case p{
     margin: 8px 0;
-    height: 100%;
-    width: 100%;
-    flex: 1 0 auto;
 }
 
 .case a{
@@ -266,7 +264,6 @@ header {
 .case a:hover {
     background-color: var(--white);
     color: var(--black-secundary);
-    /* font-weight: bold; */
     transition: background-color .4s;
 }
 
@@ -498,8 +495,34 @@ footer {
     transition: transform .3s;
   }
 
-/* CONFIGURAÇÃO PARA MOBILE */
+/* CONFIGURAÇÃO PARA TABLET*/
+  
+  @media screen and (max-width: 992px) {
+      .header {
+          padding: 0 24px;
+        }
+        
+        #hero {
+            width: 100%;
+            padding: 45px;
+        }
 
+        #projects {
+            height: 100%;
+            padding: 48px 24px;
+        }
+       
+        #profissional {
+            padding: 48px 24px;
+        }
+
+        .sobre {
+            padding: 24px;
+        }
+    }
+
+/* CONFIGURAÇÃO PARA MOBILE */
+    
   @media screen and (max-width: 601px) {
     .header {
         padding: 0 16px;
