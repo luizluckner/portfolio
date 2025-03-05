@@ -511,6 +511,21 @@ footer {
             height: 100%;
             padding: 48px 24px;
         }
+
+        #container {
+            width: 100%;
+            flex-flow: column nowrap;
+            padding: 0 32px;
+        }
+
+        .case {
+            width: 100%;
+            flex: 1 1 auto;
+        }
+
+        .case img {
+            height: 150px;
+        }
        
         #profissional {
             padding: 48px 24px;
