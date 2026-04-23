@@ -212,7 +212,7 @@
         <!--FOOTER-->
         <footer>
             <div class="footer-content">
-                <p>&copy; 2026 Luiz Eduardo. Todos os direitos reservados.</p>
+                <p>&copy; <span id="thisYear"></span> Luiz Eduardo. Todos os direitos reservados.</p>
                 <div class="social-links">
                     <a href="https://www.linkedin.com/in/luizluckner/" class="icon" target="_blank" rel="noopener noreferrer">
                         <img src="image/linkedin-icon.png" alt="LinkedIn">
@@ -231,22 +231,37 @@
         </footer>
     </main>
     <script>
-        window.onload = function showAge() {
-            const nascimento = new Date(1991,6,2)
+       <script>
+          window.onload = function () {
+        
+            /* ====== IDADE ====== */
+            const nascimento = new Date(1991, 6, 2) 
+            // mês começa em 0 → 6 = julho
+        
             const hoje = new Date()
             let idade = hoje.getFullYear() - nascimento.getFullYear()
-
+        
             const mesAtual = hoje.getMonth()
             const diaAtual = hoje.getDate()
-            const mesBorn = nascimento.getMonth()
-            const diaBorn = nascimento.getDate()
-
-            if (mesAtual < mesBorn || (mesAtual === mesBorn && diaAtual < diaBorn)) {
-               idade --
-            } 
-
-            document.querySelector('#myAge').innerHTML = idade
-        }
+            const mesNasc = nascimento.getMonth()
+            const diaNasc = nascimento.getDate()
+        
+            if (
+              mesAtual < mesNasc ||
+              (mesAtual === mesNasc && diaAtual < diaNasc)
+            ) {
+              idade--
+            }
+        
+            document.querySelector('#myAge').textContent = idade
+        
+        
+            /* ====== ANO DO FOOTER ====== */
+            const anoAtual = hoje.getFullYear()
+            document.querySelector('#thisYear').textContent = anoAtual
+        
+          }
+</script>
     </script>
 </body>
 </html>
