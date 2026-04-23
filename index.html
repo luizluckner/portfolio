@@ -231,37 +231,22 @@
         </footer>
     </main>
     <script>
-       <script>
-          window.onload = function () {
-        
-            /* ====== IDADE ====== */
-            const nascimento = new Date(1991, 6, 2) 
-            // mês começa em 0 → 6 = julho
-        
+         window.onload = function showAge() {
+            const nascimento = new Date(1991,6,2)
             const hoje = new Date()
             let idade = hoje.getFullYear() - nascimento.getFullYear()
-        
+
             const mesAtual = hoje.getMonth()
             const diaAtual = hoje.getDate()
-            const mesNasc = nascimento.getMonth()
-            const diaNasc = nascimento.getDate()
-        
-            if (
-              mesAtual < mesNasc ||
-              (mesAtual === mesNasc && diaAtual < diaNasc)
-            ) {
-              idade--
-            }
-        
-            document.querySelector('#myAge').textContent = idade
-        
-        
-            /* ====== ANO DO FOOTER ====== */
-            const anoAtual = hoje.getFullYear()
-            document.querySelector('#thisYear').textContent = anoAtual
-        
-          }
-</script>
+            const mesBorn = nascimento.getMonth()
+            const diaBorn = nascimento.getDate()
+
+            if (mesAtual < mesBorn || (mesAtual === mesBorn && diaAtual < diaBorn)) {
+               idade --
+            } 
+
+            document.querySelector('#myAge').innerHTML = idade
+        }
     </script>
 </body>
 </html>
