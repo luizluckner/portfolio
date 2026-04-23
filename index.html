@@ -212,7 +212,7 @@
         <!--FOOTER-->
         <footer>
             <div class="footer-content">
-                <p>&copy; <span id="thisYear"></span> Luiz Eduardo. Todos os direitos reservados.</p>
+                <p>&copy; <span id="thisYear">XXXX</span> Luiz Eduardo. Todos os direitos reservados.</p>
                 <div class="social-links">
                     <a href="https://www.linkedin.com/in/luizluckner/" class="icon" target="_blank" rel="noopener noreferrer">
                         <img src="image/linkedin-icon.png" alt="LinkedIn">
@@ -231,7 +231,7 @@
         </footer>
     </main>
     <script>
-         window.onload = function showAge() {
+         function showAge() {
             const nascimento = new Date(1991,6,2)
             const hoje = new Date()
             let idade = hoje.getFullYear() - nascimento.getFullYear()
@@ -246,6 +246,18 @@
             } 
 
             document.querySelector('#myAge').innerHTML = idade
+        }
+
+        function atualYear () {
+            const ano = new Date()
+            const anoAtual = ano.getFullYear()
+
+            document.querySelector('#thisYear').innerHTML = anoAtual
+        }
+
+        window.onload function () {
+            showAge()
+            atualYear()
         }
     </script>
 </body>
